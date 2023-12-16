@@ -91,8 +91,8 @@ public class RegistrationTests extends TestBase {
 
 
     }
-    @Test(groups = {"negative"},dataProvider = "userNegativeDtoCSV",dataProviderClass = ProviderData.class)
-    public void registrationNegativeEmptyPassword(UserLombok userLombok) {
+    @Test(groups = {"negative"},dataProvider = "userNegativDtoCSV",dataProviderClass = ProviderData.class)
+    public void registrationNegativeEmptyPassword(User user) {
 //        int i = (int) (System.currentTimeMillis() / 1000) % 3600;
 //        UserLombok userLombok =  UserLombok.builder()
 //                .name("Sally")
@@ -101,7 +101,7 @@ public class RegistrationTests extends TestBase {
 //                .password("")
 //                .build();
         TestBase.app.getUser().openRegestrationForm();
-        TestBase.app.getUser().fillRegistrationFormLombok(userLombok);
+        TestBase.app.getUser().fillRegistrationFormWith(user);
         TestBase.app.getUser().submitLogin();
         flagNeedOpenMainPage=true;
         logger.info("flagNeedOpenMainPage = " + flagNeedOpenMainPage);

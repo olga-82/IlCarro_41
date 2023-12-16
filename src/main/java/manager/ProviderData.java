@@ -37,16 +37,16 @@ public class ProviderData {
         int i = (int) (System.currentTimeMillis() / 1000) % 3600;
         List<Object[]> list = new ArrayList<>();
         list.add(new Object[]{new User()
-                .withName("Sally")
+                .withName("Sara")
                 .withLastName("Rotten")
-                .withEmail("nefr" + i + "@gmail.com")
+                .withEmail("lili" + i + "@gmail.com")
                 .withPassword("Rita12300$")
 
         });
         list.add(new Object[]{new User()
                 .withName("Sally")
                 .withLastName("Rotten")
-                .withEmail("rott" + i + "@gmail.com")
+                .withEmail("gigi" + i + "@gmail.com")
                 .withPassword("Rita12300$")
         });
 
