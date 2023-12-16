@@ -11,45 +11,55 @@ public class TestNgListeners  implements ITestListener{
 
     @Override
     public void onTestStart(ITestResult result) {
+        logger.info("TestNG event onTestStart getName: " + result.getName());
+        logger.info("TestNG event onTestStart getHost: " + result.getHost());
+        logger.info("TestNG event onTestStart getTestContext: " + result.getTestContext());
         ITestListener.super.onTestStart(result);
-        logger.info("Test "+ result.getName() +"  started");
     }
 
     @Override
     public void onTestSuccess(ITestResult result) {
         ITestListener.super.onTestSuccess(result);
         logger.info("Test "+ result.getName() +"  successful");
+        logger.info("TestNG event onTestSuccess getTestContext: " + result.getTestContext());
     }
 
     @Override
     public void onTestFailure(ITestResult result) {
         ITestListener.super.onTestFailure(result);
-        logger.info("Test "+ result.getName() +"  failed " +result.getThrowable().fillInStackTrace());
+        logger.warn("TestNG event onTestFailure getName: " + result.getName());
     }
 
     @Override
     public void onTestSkipped(ITestResult result) {
         ITestListener.super.onTestSkipped(result);
+        logger.warn("TestNG event onTestSkipped getName: " + result.getName());
     }
 
     @Override
     public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
         ITestListener.super.onTestFailedButWithinSuccessPercentage(result);
+        logger.info("TestNG event onTestFailedButWithinSuccessPercentage getName: " + result.getName());
     }
 
     @Override
     public void onTestFailedWithTimeout(ITestResult result) {
         ITestListener.super.onTestFailedWithTimeout(result);
+        logger.error("TestNG event onTestFailedWithTimeout getName: " + result.getName());
     }
 
     @Override
     public void onStart(ITestContext context) {
         ITestListener.super.onStart(context);
+        logger.info("Test "+context.getName() +"  started");
+        logger.info("TestNG event onStart getStartDate: " + context.getStartDate());
     }
 
     @Override
     public void onFinish(ITestContext context) {
         ITestListener.super.onFinish(context);
+        logger.info("TestNG event onFinish getPassedTests: " + context.getPassedTests());
+        logger.info("TestNG event onFinish getFailedTests: " + context.getFailedTests());
+        logger.info("TestNG event onFinish getSkippedTests: " + context.getSkippedTests());
     }
 }
-

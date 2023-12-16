@@ -9,9 +9,12 @@ import org.testng.annotations.*;
 
 import java.lang.reflect.Method;
 
+
 @Listeners(TestNgListeners.class)
 public class LoginTests extends TestBase {
- @AfterMethod(alwaysRun = true)
+
+
+@AfterMethod(alwaysRun = true)
     public void precondition(Method method){
         if (flagNeedLogout) {
             TestBase.app.getUser().logout();
@@ -28,7 +31,8 @@ public class LoginTests extends TestBase {
     }
     @Test(groups = {"positive"},dataProvider="userDto",dataProviderClass = ProviderData.class)
     public void loginPositiveUser(User user) {
-       TestBase.app.getUser().login(user);
+        app.getUser().login(user);
+
         flagNeedLogout=true;
         logger.info("flagNeedLogout = " + flagNeedLogout);
         logger.info(" loginPositiveUser starts with credentials "
@@ -37,30 +41,34 @@ public class LoginTests extends TestBase {
         TestBase.app.getUser().buttonOk();
 
 
+
     }
     @Test(groups = {"positive"},dataProvider="userDto",dataProviderClass = ProviderData.class)
     public void loginPositiveUser2(User user) {
-        TestBase.app.getUser().login(user);
+        app.getUser().login(user);
         flagNeedLogout=true;
-        TestBase.app.getUser().isElementPresent(By.xpath("//h1[.='Logged in']")) ;
-        TestBase.app.getUser().buttonOk();
+        app.getUser().isElementPresent(By.xpath("//h1[.='Logged in']")) ;
+        app.getUser().buttonOk();
+
 
     }
     @Test
     public void loginPositiveUserProps() {
 
-        app.getUser().login(app.getEmail(),app.getPassword());
+        app.getUser().login(app.getEmail(), app.getPassword());
         flagNeedLogout=true;
         app.getUser().isElementPresent(By.xpath("//h1[.='Logged in']")) ;
         app.getUser().buttonOk();
 
+
     }
     @Test(groups = {"positive"},dataProvider="userDto",dataProviderClass = ProviderData.class)
     public void loginPositiveUserDTO(User user) {
-        TestBase.app.getUser().login(user);
+        app.getUser().login(user);
         flagNeedLogout=true;
-        TestBase.app.getUser().isElementPresent(By.xpath("//h1[.='Logged in']")) ;
-        TestBase.app.getUser().buttonOk();
+        app.getUser().isElementPresent(By.xpath("//h1[.='Logged in']")) ;
+        app.getUser().buttonOk();
+
 
     }
 
@@ -69,11 +77,11 @@ public class LoginTests extends TestBase {
         UserLombok user =  UserLombok.builder()
                 .email("nefr42@gmail.com")
                 .password("Rita12345$")
-                 .build();
-      TestBase.app.getUser().loginLombok(user);
-      flagNeedLogout=true;
-        TestBase.app.getUser().isElementPresent(By.xpath("//h1[.='Logged in']")) ;
-        TestBase.app.getUser().buttonOk();
+                .build();
+         app.getUser().loginLombok(user);
+         flagNeedLogout=true;
+         app.getUser().isElementPresent(By.xpath("//h1[.='Logged in']")) ;
+         app.getUser().buttonOk();
 
     }
     @Test(groups = {"negative"})
@@ -103,10 +111,10 @@ public class LoginTests extends TestBase {
     }
 
 
-//    @AfterMethod
+ //   @AfterMethod
 //    public void postcondition(){
 //
-//            app.getUser().buttonOk();
+//            app.getUser().logout();
 //
 //    }
 

@@ -2,7 +2,8 @@ package tests;
 
 import manager.AplicationManager;
 import manager.TestNgListeners;
-import org.openqa.selenium.remote.BrowserType;
+
+import org.openqa.selenium.remote.Browser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.AfterMethod;
@@ -17,7 +18,7 @@ public class TestBase {
 
     Logger logger = LoggerFactory.getLogger(TestBase.class);
   static   AplicationManager app = new AplicationManager
-          (  System.getProperty("browser", BrowserType.CHROME)
+          (  System.getProperty("browser", Browser.CHROME.browserName())
           );
 
     boolean flagNeedLogout = false;
@@ -31,10 +32,10 @@ public class TestBase {
 
 
 
-    @AfterSuite
+    @AfterSuite(alwaysRun = true)
 
     public void stop() {
-       app.tearDown();
+      // app.tearDown();
 
     }
   public void startLogger(Method method) {

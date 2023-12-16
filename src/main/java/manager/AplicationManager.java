@@ -1,31 +1,33 @@
 package manager;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.remote.BrowserType;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.Browser;
+
 import org.openqa.selenium.safari.SafariDriver;
-import org.openqa.selenium.support.events.EventFiringWebDriver;
+import org.openqa.selenium.support.events.EventFiringDecorator;
+
+import org.openqa.selenium.support.events.WebDriverListener;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.List;
+import java.time.Duration;
 import java.util.Properties;
-import java.util.concurrent.TimeUnit;
+
 
 public class AplicationManager {
 
    Logger logger = LoggerFactory.getLogger(AplicationManager.class);
   //  WebDriver wd;
-  EventFiringWebDriver wd;
+  WebDriver wd;
     HelperUser user;
     HelperCar car;
     HelperSearch search;
@@ -64,27 +66,35 @@ public class AplicationManager {
        // properties.load(new FileReader(new File("src/test/resources/prod.properties")));
         String target=System.getProperty("target","prod");
         properties.load(new FileReader(new File(String.format("src/test/resources/%s.properties", target))));
-        if(browser.equals(BrowserType.CHROME)) {
-            wd = new EventFiringWebDriver(new ChromeDriver());
-            logger.info("Test start on Chrome");
-        }else if(browser.equals(BrowserType.FIREFOX)){
-            wd = new EventFiringWebDriver(new FirefoxDriver());
-            logger.info("Test start on FireFox");
-        } else if (browser.equals(BrowserType.SAFARI)) {
-            wd=new EventFiringWebDriver(new SafariDriver());
-            logger.info("Test start on Safari");
-
-
+        if (browser.equals(Browser.CHROME.browserName())){
+            ChromeOptions options = new ChromeOptions();
+            // options.addArguments("--headless=new");
+            WebDriver original = new ChromeDriver(options);
+            WebDriverListener listener = new WdListener ();
+           wd = new EventFiringDecorator(listener).decorate(original);
+            logger.warn(browser);
+        } else if (browser.equals(Browser.FIREFOX.browserName())){
+            FirefoxOptions options = new FirefoxOptions();
+           // options.addArguments("--headless");
+            WebDriver original = new FirefoxDriver(options);
+            WebDriverListener listener = new WdListener();
+            wd = new EventFiringDecorator(listener).decorate(original);
+            logger.warn(browser);
         }
+//        } else if (browser.equals(BrowserType.SAFARI)) {
+//            wd=new EventFiringWebDriver(new SafariDriver());
+//            logger.info("Test start on Safari");
+//
+//
+//        }
         user = new HelperUser(wd);
         car = new HelperCar(wd);
         search=new HelperSearch(wd);
-        wd.register(new WdListener());
 
         wd.manage().window().maximize();
 //        wd.navigate().to("https://ilcarro.web.app/search)");
         wd.navigate().to(properties.getProperty("web.baseUrl"));
-        wd.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        wd.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
 
     }
 

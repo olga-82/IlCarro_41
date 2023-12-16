@@ -44,7 +44,7 @@ public class RegistrationTests extends TestBase {
 
 
     }
-    @Test(groups = {"positive"},dataProvider="userDtoCSV",dataProviderClass = ProviderData.class)
+    @Test(groups = {"positive"},dataProvider="userDtoRegPositive",dataProviderClass = ProviderData.class)
     public void registrationPositiveCSV(User user) {
 
         TestBase.app.getUser().openRegestrationForm();
@@ -91,15 +91,15 @@ public class RegistrationTests extends TestBase {
 
 
     }
-    @Test(groups = {"negative"})
-    public void registrationNegativeEmptyPassword() {
-        int i = (int) (System.currentTimeMillis() / 1000) % 3600;
-        UserLombok userLombok =  UserLombok.builder()
-                .name("Sally")
-                .lastName("Rotten")
-                .email("nefr"+i+"@gmail.com")
-                .password("")
-                .build();
+    @Test(groups = {"negative"},dataProvider = "userNegativeDtoCSV",dataProviderClass = ProviderData.class)
+    public void registrationNegativeEmptyPassword(UserLombok userLombok) {
+//        int i = (int) (System.currentTimeMillis() / 1000) % 3600;
+//        UserLombok userLombok =  UserLombok.builder()
+//                .name("Sally")
+//                .lastName("Rotten")
+//                .email("nefr"+i+"@gmail.com")
+//                .password("")
+//                .build();
         TestBase.app.getUser().openRegestrationForm();
         TestBase.app.getUser().fillRegistrationFormLombok(userLombok);
         TestBase.app.getUser().submitLogin();

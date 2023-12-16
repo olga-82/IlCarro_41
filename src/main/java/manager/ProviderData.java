@@ -82,11 +82,11 @@ public class ProviderData {
     }
 
     @DataProvider
-    public Iterator<Object[]> userDtoCSV()  {
+    public Iterator<Object[]> userNegativDtoCSV()  {
         List<Object[]> list = new ArrayList<>();
         BufferedReader reader = null;
         try {
-            reader = new BufferedReader(new FileReader(new File("src/test/resources/reg_dataset.csv")));
+            reader = new BufferedReader(new FileReader(new File("src/test/resources/reg_negativ_dataset.csv")));
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }

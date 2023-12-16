@@ -23,6 +23,15 @@ public class HelperBase {
         element.clear();
         element.sendKeys(text);
     }
+    public void typeEmailLogin(By locator, String text) {
+        WebElement element = wd.findElement(locator);
+        element.click();
+        WebElement element2 = wd.findElement(locator);
+        element2.click();
+        element.clear();
+        element.sendKeys(text);
+
+    }
     public void pause(int millis) {
         try {
             Thread.sleep(millis);

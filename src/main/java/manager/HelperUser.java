@@ -4,9 +4,8 @@ import models.User;
 import models.UserLombok;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Rectangle;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.WebElement;
 
 public class HelperUser extends HelperBase {
 
@@ -21,7 +20,7 @@ public class HelperUser extends HelperBase {
     }
 
     public void fillLoginForm(String email, String password) {
-        type(By.xpath(" //input[@id='email']"), email);
+        typeEmailLogin(By.xpath("//*[@id='email']"), email);
         type(By.xpath(" //input[@id='password']"), password);
     }
 
@@ -38,7 +37,8 @@ public class HelperUser extends HelperBase {
     }
 
     public void fillLoginForm(User user) {
-        type(By.xpath(" //input[@id='email']"), user.getEmail());
+
+        typeEmailLogin(By.xpath("//*[@id='email']"), user.getEmail());
         type(By.xpath(" //input[@id='password']"), user.getPassword());
     }
     public void fillRegistrationFormLombok(UserLombok user) {
@@ -81,6 +81,7 @@ public class HelperUser extends HelperBase {
     }
     public void loginLombok(UserLombok user) {
         openLoginForm();
+        pause(15);
         fillLoginForm(user.getEmail(), user.getPassword());
         submitLogin();
 
@@ -112,6 +113,7 @@ public class HelperUser extends HelperBase {
 
     public void login(String email, String password) {
         openLoginForm();
+        pause(15);
         fillLoginForm(email, password);
         submitLogin();
 
