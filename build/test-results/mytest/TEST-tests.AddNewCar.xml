@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="tests.AddNewCar" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-12-16T15:46:22" hostname="MBP-olga" time="7.679">
+  <properties/>
+  <testcase name="addNewCarPositive" classname="tests.AddNewCar" time="7.679"/>
+  <system-out><![CDATA[17:46:22.379 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getName: addNewCarPositive
+17:46:22.379 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getHost: null
+17:46:22.379 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getTestContext: org.testng.TestRunner@7d986d83
+17:46:30.058 [Test worker] INFO  manager.TestNgListeners - Test addNewCarPositive  successful
+17:46:30.058 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestSuccess getTestContext: org.testng.TestRunner@7d986d83
+17:46:30.285 [Test worker] INFO  tests.TestBase - flagNeedLogout = false
+17:46:30.286 [Test worker] INFO  tests.TestBase - method info: addNewCarPositive
+17:46:30.287 [Test worker] INFO  tests.TestBase - ================================================================================================================
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

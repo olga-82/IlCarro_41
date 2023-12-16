@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="tests.RegistrationTests" tests="4" skipped="0" failures="0" errors="0" timestamp="2023-12-16T15:45:25" hostname="MBP-olga" time="5.154">
+  <properties/>
+  <testcase name="registrationPositive[0](models.User@ed2f2f6)" classname="tests.RegistrationTests" time="1.626"/>
+  <testcase name="registrationPositive[1](models.User@553da911)" classname="tests.RegistrationTests" time="0.906"/>
+  <testcase name="registrationPositiveCSV[0](models.User@2f677247)" classname="tests.RegistrationTests" time="0.926"/>
+  <testcase name="registrationPositiveCSV[1](models.User@3b481bf5)" classname="tests.RegistrationTests" time="0.97"/>
+  <system-out><![CDATA[17:45:25.093 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getName: registrationPositive
+17:45:25.093 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getHost: null
+17:45:25.093 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getTestContext: org.testng.TestRunner@7d986d83
+17:45:25.668 [Test worker] INFO  tests.TestBase - registrationPositive starts with credentials lili2725@gmail.com Rita12300$
+17:45:25.669 [Test worker] INFO  tests.TestBase - flagNeedLogout = true
+17:45:26.722 [Test worker] INFO  manager.TestNgListeners - Test registrationPositive  successful
+17:45:26.722 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestSuccess getTestContext: org.testng.TestRunner@7d986d83
+17:45:26.962 [Test worker] INFO  tests.TestBase - flagNeedLogout = false
+17:45:26.963 [Test worker] INFO  tests.TestBase - method info: registrationPositive
+17:45:26.966 [Test worker] INFO  tests.TestBase - ================================================================================================================
+17:45:26.967 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getName: registrationPositive
+17:45:26.967 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getHost: null
+17:45:26.967 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getTestContext: org.testng.TestRunner@7d986d83
+17:45:27.503 [Test worker] INFO  tests.TestBase - registrationPositive starts with credentials gigi2725@gmail.com Rita12300$
+17:45:27.503 [Test worker] INFO  tests.TestBase - flagNeedLogout = true
+17:45:27.873 [Test worker] INFO  manager.TestNgListeners - Test registrationPositive  successful
+17:45:27.874 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestSuccess getTestContext: org.testng.TestRunner@7d986d83
+17:45:28.110 [Test worker] INFO  tests.TestBase - flagNeedLogout = false
+17:45:28.110 [Test worker] INFO  tests.TestBase - method info: registrationPositive
+17:45:28.112 [Test worker] INFO  tests.TestBase - ================================================================================================================
+17:45:28.115 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getName: registrationPositiveCSV
+17:45:28.115 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getHost: null
+17:45:28.115 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getTestContext: org.testng.TestRunner@7d986d83
+17:45:28.651 [Test worker] INFO  tests.TestBase - registrationPositive starts with credentials lili2728@gmail.com Rita12300$
+17:45:28.651 [Test worker] INFO  tests.TestBase - flagNeedLogout = true
+17:45:29.041 [Test worker] INFO  manager.TestNgListeners - Test registrationPositiveCSV  successful
+17:45:29.042 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestSuccess getTestContext: org.testng.TestRunner@7d986d83
+17:45:29.275 [Test worker] INFO  tests.TestBase - flagNeedLogout = false
+17:45:29.275 [Test worker] INFO  tests.TestBase - method info: registrationPositiveCSV
+17:45:29.276 [Test worker] INFO  tests.TestBase - ================================================================================================================
+17:45:29.277 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getName: registrationPositiveCSV
+17:45:29.277 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getHost: null
+17:45:29.277 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getTestContext: org.testng.TestRunner@7d986d83
+17:45:29.792 [Test worker] INFO  tests.TestBase - registrationPositive starts with credentials gigi2728@gmail.com Rita12300$
+17:45:29.792 [Test worker] INFO  tests.TestBase - flagNeedLogout = true
+17:45:30.247 [Test worker] INFO  manager.TestNgListeners - Test registrationPositiveCSV  successful
+17:45:30.247 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestSuccess getTestContext: org.testng.TestRunner@7d986d83
+17:45:30.475 [Test worker] INFO  tests.TestBase - flagNeedLogout = false
+17:45:30.476 [Test worker] INFO  tests.TestBase - method info: registrationPositiveCSV
+17:45:30.478 [Test worker] INFO  tests.TestBase - ================================================================================================================
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
