@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">7</div>
+<div class="counter">20</div>
 <p>tests</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">8.994s</div>
+<div class="counter">1m44.35s</div>
 <p>duration</p>
 </div>
 </td>
@@ -78,38 +78,103 @@
 </tr>
 </thead>
 <tr>
-<td class="success">loginPositiveUser2[0](models.User@26c77f54)</td>
-<td class="success">1.265s</td>
+<td class="success">loginNegativeWrongEmail</td>
+<td class="success">5.486s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">loginPositiveUser2[1](models.User@6075b369)</td>
-<td class="success">1.258s</td>
+<td class="success">loginNegativeWrongEmail</td>
+<td class="success">6.264s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">loginPositiveUserDTO[0](models.User@2017f6e6)</td>
-<td class="success">1.272s</td>
+<td class="success">loginNegativeWrongPassword</td>
+<td class="success">5.461s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">loginPositiveUserDTO[1](models.User@9d3d54e)</td>
-<td class="success">1.296s</td>
+<td class="success">loginNegativeWrongPassword</td>
+<td class="success">5.447s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">loginPositiveUser2[0](models.User@315b5913)</td>
+<td class="success">5.306s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">loginPositiveUser2[0](models.User@76f2dad9)</td>
+<td class="success">5.247s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">loginPositiveUser2[1](models.User@466fedfa)</td>
+<td class="success">5.334s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">loginPositiveUser2[1](models.User@70997a94)</td>
+<td class="success">5.332s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">loginPositiveUserDTO[0](models.User@13213f26)</td>
+<td class="success">5.328s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">loginPositiveUserDTO[0](models.User@38929da)</td>
+<td class="success">5.333s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">loginPositiveUserDTO[1](models.User@4aed311e)</td>
+<td class="success">5.340s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">loginPositiveUserDTO[1](models.User@627acb38)</td>
+<td class="success">5.332s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">loginPositiveUserLombok</td>
-<td class="success">1.258s</td>
+<td class="success">5.312s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">loginPositiveUser[0](models.User@61f377d1)</td>
-<td class="success">1.392s</td>
+<td class="success">loginPositiveUserLombok</td>
+<td class="success">5.329s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">loginPositiveUser[1](models.User@4e4162bc)</td>
-<td class="success">1.253s</td>
+<td class="success">loginPositiveUserProps</td>
+<td class="success">3.308s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">loginPositiveUserProps</td>
+<td class="success">3.321s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">loginPositiveUser[0](models.User@1231a1be)</td>
+<td class="success">5.317s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">loginPositiveUser[0](models.User@6003ad65)</td>
+<td class="success">5.323s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">loginPositiveUser[1](models.User@4f116ca2)</td>
+<td class="success">5.896s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">loginPositiveUser[1](models.User@52b32b70)</td>
+<td class="success">5.331s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -117,66 +182,190 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>17:45:30.482 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getName: loginPositiveUser
-17:45:30.482 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getHost: null
-17:45:30.482 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getTestContext: org.testng.TestRunner@7d986d83
-17:45:31.417 [Test worker] INFO  tests.TestBase - flagNeedLogout = true
-17:45:31.417 [Test worker] INFO  tests.TestBase -  loginPositiveUser starts with credentials nefr42@gmail.com Rita12345$
-17:45:31.874 [Test worker] INFO  manager.TestNgListeners - Test loginPositiveUser  successful
-17:45:31.874 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestSuccess getTestContext: org.testng.TestRunner@7d986d83
-17:45:32.108 [Test worker] INFO  tests.TestBase - flagNeedLogout = false
-17:45:32.109 [Test worker] INFO  tests.TestBase - method info: loginPositiveUser
-17:45:32.110 [Test worker] INFO  tests.TestBase - ================================================================================================================
-17:45:32.111 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getName: loginPositiveUser
-17:45:32.111 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getHost: null
-17:45:32.111 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getTestContext: org.testng.TestRunner@7d986d83
-17:45:33.070 [Test worker] INFO  tests.TestBase - flagNeedLogout = true
-17:45:33.071 [Test worker] INFO  tests.TestBase -  loginPositiveUser starts with credentials nefr597@gmail.com Rita12300$
-17:45:33.364 [Test worker] INFO  manager.TestNgListeners - Test loginPositiveUser  successful
-17:45:33.364 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestSuccess getTestContext: org.testng.TestRunner@7d986d83
-17:45:33.592 [Test worker] INFO  tests.TestBase - flagNeedLogout = false
-17:45:33.593 [Test worker] INFO  tests.TestBase - method info: loginPositiveUser
-17:45:33.595 [Test worker] INFO  tests.TestBase - ================================================================================================================
-17:45:33.596 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getName: loginPositiveUser2
-17:45:33.597 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getHost: null
-17:45:33.597 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getTestContext: org.testng.TestRunner@7d986d83
-17:45:34.861 [Test worker] INFO  manager.TestNgListeners - Test loginPositiveUser2  successful
-17:45:34.861 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestSuccess getTestContext: org.testng.TestRunner@7d986d83
-17:45:35.097 [Test worker] INFO  tests.TestBase - flagNeedLogout = false
-17:45:35.098 [Test worker] INFO  tests.TestBase - method info: loginPositiveUser2
-17:45:35.099 [Test worker] INFO  tests.TestBase - ================================================================================================================
-17:45:35.100 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getName: loginPositiveUser2
-17:45:35.100 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getHost: null
-17:45:35.100 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getTestContext: org.testng.TestRunner@7d986d83
-17:45:36.358 [Test worker] INFO  manager.TestNgListeners - Test loginPositiveUser2  successful
-17:45:36.359 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestSuccess getTestContext: org.testng.TestRunner@7d986d83
-17:45:36.593 [Test worker] INFO  tests.TestBase - flagNeedLogout = false
-17:45:36.593 [Test worker] INFO  tests.TestBase - method info: loginPositiveUser2
-17:45:36.594 [Test worker] INFO  tests.TestBase - ================================================================================================================
-17:45:36.595 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getName: loginPositiveUserDTO
-17:45:36.595 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getHost: null
-17:45:36.595 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getTestContext: org.testng.TestRunner@7d986d83
-17:45:37.867 [Test worker] INFO  manager.TestNgListeners - Test loginPositiveUserDTO  successful
-17:45:37.867 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestSuccess getTestContext: org.testng.TestRunner@7d986d83
-17:45:38.105 [Test worker] INFO  tests.TestBase - flagNeedLogout = false
-17:45:38.106 [Test worker] INFO  tests.TestBase - method info: loginPositiveUserDTO
-17:45:38.107 [Test worker] INFO  tests.TestBase - ================================================================================================================
-17:45:38.108 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getName: loginPositiveUserDTO
-17:45:38.108 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getHost: null
-17:45:38.108 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getTestContext: org.testng.TestRunner@7d986d83
-17:45:39.404 [Test worker] INFO  manager.TestNgListeners - Test loginPositiveUserDTO  successful
-17:45:39.404 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestSuccess getTestContext: org.testng.TestRunner@7d986d83
-17:45:39.638 [Test worker] INFO  tests.TestBase - flagNeedLogout = false
-17:45:39.639 [Test worker] INFO  tests.TestBase - method info: loginPositiveUserDTO
-17:45:39.640 [Test worker] INFO  tests.TestBase - ================================================================================================================
-17:45:39.641 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getName: loginPositiveUserLombok
-17:45:39.642 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getHost: null
-17:45:39.642 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getTestContext: org.testng.TestRunner@7d986d83
-17:45:40.899 [Test worker] INFO  manager.TestNgListeners - Test loginPositiveUserLombok  successful
-17:45:40.900 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestSuccess getTestContext: org.testng.TestRunner@7d986d83
-17:45:41.141 [Test worker] INFO  tests.TestBase - flagNeedLogout = false
-17:45:41.142 [Test worker] INFO  tests.TestBase - method info: loginPositiveUserLombok
-17:45:41.143 [Test worker] INFO  tests.TestBase - ================================================================================================================
+<pre>17:19:37.135 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getName: loginNegativeWrongEmail
+17:19:37.135 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getHost: null
+17:19:37.135 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getTestContext: org.testng.TestRunner@28a9494b
+17:19:43.401 [Test worker] INFO  manager.TestNgListeners - Test loginNegativeWrongEmail  successful
+17:19:43.401 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestSuccess getTestContext: org.testng.TestRunner@28a9494b
+17:19:43.828 [Test worker] INFO  tests.TestBase - flagNeedOpenMainPage = false
+17:19:43.828 [Test worker] INFO  tests.TestBase - ================================================================================================================
+17:19:43.829 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getName: loginNegativeWrongPassword
+17:19:43.829 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getHost: null
+17:19:43.830 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getTestContext: org.testng.TestRunner@28a9494b
+17:19:49.290 [Test worker] INFO  manager.TestNgListeners - Test loginNegativeWrongPassword  successful
+17:19:49.291 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestSuccess getTestContext: org.testng.TestRunner@28a9494b
+17:19:49.469 [Test worker] INFO  tests.TestBase - flagNeedOpenMainPage = false
+17:19:49.470 [Test worker] INFO  tests.TestBase - ================================================================================================================
+17:19:49.473 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getName: loginPositiveUser
+17:19:49.473 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getHost: null
+17:19:49.473 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getTestContext: org.testng.TestRunner@28a9494b
+17:19:54.529 [Test worker] INFO  tests.TestBase - flagNeedLogout = true
+17:19:54.538 [Test worker] INFO  tests.TestBase -  loginPositiveUser starts with credentials nefr42@gmail.com Rita12345$
+17:19:54.797 [Test worker] INFO  manager.TestNgListeners - Test loginPositiveUser  successful
+17:19:54.797 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestSuccess getTestContext: org.testng.TestRunner@28a9494b
+17:19:55.031 [Test worker] INFO  tests.TestBase - flagNeedLogout = false
+17:19:55.033 [Test worker] INFO  tests.TestBase - method info: loginPositiveUser
+17:19:55.034 [Test worker] INFO  tests.TestBase - ================================================================================================================
+17:19:55.035 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getName: loginPositiveUser
+17:19:55.035 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getHost: null
+17:19:55.036 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getTestContext: org.testng.TestRunner@28a9494b
+17:20:00.061 [Test worker] INFO  tests.TestBase - flagNeedLogout = true
+17:20:00.063 [Test worker] INFO  tests.TestBase -  loginPositiveUser starts with credentials nefr597@gmail.com Rita12300$
+17:20:00.931 [Test worker] INFO  manager.TestNgListeners - Test loginPositiveUser  successful
+17:20:00.931 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestSuccess getTestContext: org.testng.TestRunner@28a9494b
+17:20:01.173 [Test worker] INFO  tests.TestBase - flagNeedLogout = false
+17:20:01.174 [Test worker] INFO  tests.TestBase - method info: loginPositiveUser
+17:20:01.176 [Test worker] INFO  tests.TestBase - ================================================================================================================
+17:20:01.178 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getName: loginPositiveUser2
+17:20:01.179 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getHost: null
+17:20:01.179 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getTestContext: org.testng.TestRunner@28a9494b
+17:20:06.156 [Test worker] INFO  tests.TestBase - flagNeedLogout = true
+17:20:06.156 [Test worker] INFO  tests.TestBase -  loginPositiveUser starts with credentials nefr42@gmail.com Rita12345$
+17:20:06.425 [Test worker] INFO  manager.TestNgListeners - Test loginPositiveUser2  successful
+17:20:06.430 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestSuccess getTestContext: org.testng.TestRunner@28a9494b
+17:20:06.652 [Test worker] INFO  tests.TestBase - flagNeedLogout = false
+17:20:06.652 [Test worker] INFO  tests.TestBase - method info: loginPositiveUser2
+17:20:06.652 [Test worker] INFO  tests.TestBase - ================================================================================================================
+17:20:06.653 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getName: loginPositiveUser2
+17:20:06.653 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getHost: null
+17:20:06.653 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getTestContext: org.testng.TestRunner@28a9494b
+17:20:11.656 [Test worker] INFO  tests.TestBase - flagNeedLogout = true
+17:20:11.657 [Test worker] INFO  tests.TestBase -  loginPositiveUser starts with credentials nefr597@gmail.com Rita12300$
+17:20:11.986 [Test worker] INFO  manager.TestNgListeners - Test loginPositiveUser2  successful
+17:20:11.986 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestSuccess getTestContext: org.testng.TestRunner@28a9494b
+17:20:12.220 [Test worker] INFO  tests.TestBase - flagNeedLogout = false
+17:20:12.221 [Test worker] INFO  tests.TestBase - method info: loginPositiveUser2
+17:20:12.223 [Test worker] INFO  tests.TestBase - ================================================================================================================
+17:20:12.225 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getName: loginPositiveUserDTO
+17:20:12.225 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getHost: null
+17:20:12.226 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getTestContext: org.testng.TestRunner@28a9494b
+17:20:17.236 [Test worker] INFO  tests.TestBase - flagNeedLogout = true
+17:20:17.237 [Test worker] INFO  tests.TestBase -  loginPositiveUser starts with credentials nefr42@gmail.com Rita12345$
+17:20:17.553 [Test worker] INFO  manager.TestNgListeners - Test loginPositiveUserDTO  successful
+17:20:17.553 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestSuccess getTestContext: org.testng.TestRunner@28a9494b
+17:20:17.796 [Test worker] INFO  tests.TestBase - flagNeedLogout = false
+17:20:17.797 [Test worker] INFO  tests.TestBase - method info: loginPositiveUserDTO
+17:20:17.799 [Test worker] INFO  tests.TestBase - ================================================================================================================
+17:20:17.800 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getName: loginPositiveUserDTO
+17:20:17.800 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getHost: null
+17:20:17.800 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getTestContext: org.testng.TestRunner@28a9494b
+17:20:22.828 [Test worker] INFO  tests.TestBase - flagNeedLogout = true
+17:20:22.829 [Test worker] INFO  tests.TestBase -  loginPositiveUser starts with credentials nefr597@gmail.com Rita12300$
+17:20:23.140 [Test worker] INFO  manager.TestNgListeners - Test loginPositiveUserDTO  successful
+17:20:23.141 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestSuccess getTestContext: org.testng.TestRunner@28a9494b
+17:20:23.393 [Test worker] INFO  tests.TestBase - flagNeedLogout = false
+17:20:23.394 [Test worker] INFO  tests.TestBase - method info: loginPositiveUserDTO
+17:20:23.397 [Test worker] INFO  tests.TestBase - ================================================================================================================
+17:20:23.399 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getName: loginPositiveUserLombok
+17:20:23.399 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getHost: null
+17:20:23.399 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getTestContext: org.testng.TestRunner@28a9494b
+17:20:28.414 [Test worker] INFO  tests.TestBase - flagNeedLogout = true
+17:20:28.416 [Test worker] INFO  tests.TestBase -  loginPositiveUser starts with credentials nefr42@gmail.com Rita12345$
+17:20:28.727 [Test worker] INFO  manager.TestNgListeners - Test loginPositiveUserLombok  successful
+17:20:28.728 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestSuccess getTestContext: org.testng.TestRunner@28a9494b
+17:20:28.962 [Test worker] INFO  tests.TestBase - flagNeedLogout = false
+17:20:28.963 [Test worker] INFO  tests.TestBase - method info: loginPositiveUserLombok
+17:20:28.963 [Test worker] INFO  tests.TestBase - ================================================================================================================
+17:20:28.963 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getName: loginPositiveUserProps
+17:20:28.963 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getHost: null
+17:20:28.964 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getTestContext: org.testng.TestRunner@28a9494b
+17:20:32.285 [Test worker] INFO  manager.TestNgListeners - Test loginPositiveUserProps  successful
+17:20:32.285 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestSuccess getTestContext: org.testng.TestRunner@28a9494b
+17:20:32.522 [Test worker] INFO  tests.TestBase - flagNeedLogout = false
+17:20:32.523 [Test worker] INFO  tests.TestBase - method info: loginPositiveUserProps
+17:20:32.524 [Test worker] INFO  tests.TestBase - ================================================================================================================
+17:21:21.671 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getName: loginNegativeWrongEmail
+17:21:21.671 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getHost: null
+17:21:21.671 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getTestContext: org.testng.TestRunner@56da96b3
+17:21:27.158 [Test worker] INFO  manager.TestNgListeners - Test loginNegativeWrongEmail  successful
+17:21:27.159 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestSuccess getTestContext: org.testng.TestRunner@56da96b3
+17:21:27.338 [Test worker] INFO  tests.TestBase - flagNeedOpenMainPage = false
+17:21:27.338 [Test worker] INFO  tests.TestBase - ================================================================================================================
+17:21:27.338 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getName: loginNegativeWrongPassword
+17:21:27.339 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getHost: null
+17:21:27.339 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getTestContext: org.testng.TestRunner@56da96b3
+17:21:32.786 [Test worker] INFO  manager.TestNgListeners - Test loginNegativeWrongPassword  successful
+17:21:32.787 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestSuccess getTestContext: org.testng.TestRunner@56da96b3
+17:21:32.917 [Test worker] INFO  tests.TestBase - flagNeedOpenMainPage = false
+17:21:32.917 [Test worker] INFO  tests.TestBase - ================================================================================================================
+17:21:32.918 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getName: loginPositiveUser
+17:21:32.918 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getHost: null
+17:21:32.918 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getTestContext: org.testng.TestRunner@56da96b3
+17:21:37.915 [Test worker] INFO  tests.TestBase - flagNeedLogout = true
+17:21:37.916 [Test worker] INFO  tests.TestBase -  loginPositiveUser starts with credentials nefr42@gmail.com Rita12345$
+17:21:38.235 [Test worker] INFO  manager.TestNgListeners - Test loginPositiveUser  successful
+17:21:38.236 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestSuccess getTestContext: org.testng.TestRunner@56da96b3
+17:21:38.483 [Test worker] INFO  tests.TestBase - flagNeedLogout = false
+17:21:38.483 [Test worker] INFO  tests.TestBase - method info: loginPositiveUser
+17:21:38.485 [Test worker] INFO  tests.TestBase - ================================================================================================================
+17:21:38.486 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getName: loginPositiveUser
+17:21:38.486 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getHost: null
+17:21:38.486 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getTestContext: org.testng.TestRunner@56da96b3
+17:21:43.502 [Test worker] INFO  tests.TestBase - flagNeedLogout = true
+17:21:43.503 [Test worker] INFO  tests.TestBase -  loginPositiveUser starts with credentials nefr597@gmail.com Rita12300$
+17:21:43.817 [Test worker] INFO  manager.TestNgListeners - Test loginPositiveUser  successful
+17:21:43.817 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestSuccess getTestContext: org.testng.TestRunner@56da96b3
+17:21:44.047 [Test worker] INFO  tests.TestBase - flagNeedLogout = false
+17:21:44.047 [Test worker] INFO  tests.TestBase - method info: loginPositiveUser
+17:21:44.049 [Test worker] INFO  tests.TestBase - ================================================================================================================
+17:21:44.051 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getName: loginPositiveUser2
+17:21:44.051 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getHost: null
+17:21:44.051 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getTestContext: org.testng.TestRunner@56da96b3
+17:21:49.042 [Test worker] INFO  tests.TestBase - flagNeedLogout = true
+17:21:49.043 [Test worker] INFO  tests.TestBase -  loginPositiveUser starts with credentials nefr42@gmail.com Rita12345$
+17:21:49.357 [Test worker] INFO  manager.TestNgListeners - Test loginPositiveUser2  successful
+17:21:49.357 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestSuccess getTestContext: org.testng.TestRunner@56da96b3
+17:21:49.589 [Test worker] INFO  tests.TestBase - flagNeedLogout = false
+17:21:49.590 [Test worker] INFO  tests.TestBase - method info: loginPositiveUser2
+17:21:49.592 [Test worker] INFO  tests.TestBase - ================================================================================================================
+17:21:49.593 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getName: loginPositiveUser2
+17:21:49.593 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getHost: null
+17:21:49.594 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getTestContext: org.testng.TestRunner@56da96b3
+17:21:54.619 [Test worker] INFO  tests.TestBase - flagNeedLogout = true
+17:21:54.620 [Test worker] INFO  tests.TestBase -  loginPositiveUser starts with credentials nefr597@gmail.com Rita12300$
+17:21:54.927 [Test worker] INFO  manager.TestNgListeners - Test loginPositiveUser2  successful
+17:21:54.928 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestSuccess getTestContext: org.testng.TestRunner@56da96b3
+17:21:55.162 [Test worker] INFO  tests.TestBase - flagNeedLogout = false
+17:21:55.162 [Test worker] INFO  tests.TestBase - method info: loginPositiveUser2
+17:21:55.163 [Test worker] INFO  tests.TestBase - ================================================================================================================
+17:21:55.163 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getName: loginPositiveUserDTO
+17:21:55.163 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getHost: null
+17:21:55.163 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getTestContext: org.testng.TestRunner@56da96b3
+17:22:00.180 [Test worker] INFO  tests.TestBase - flagNeedLogout = true
+17:22:00.181 [Test worker] INFO  tests.TestBase -  loginPositiveUser starts with credentials nefr42@gmail.com Rita12345$
+17:22:00.496 [Test worker] INFO  manager.TestNgListeners - Test loginPositiveUserDTO  successful
+17:22:00.497 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestSuccess getTestContext: org.testng.TestRunner@56da96b3
+17:22:00.735 [Test worker] INFO  tests.TestBase - flagNeedLogout = false
+17:22:00.736 [Test worker] INFO  tests.TestBase - method info: loginPositiveUserDTO
+17:22:00.738 [Test worker] INFO  tests.TestBase - ================================================================================================================
+17:22:00.739 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getName: loginPositiveUserDTO
+17:22:00.739 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getHost: null
+17:22:00.739 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getTestContext: org.testng.TestRunner@56da96b3
+17:22:05.748 [Test worker] INFO  tests.TestBase - flagNeedLogout = true
+17:22:05.750 [Test worker] INFO  tests.TestBase -  loginPositiveUser starts with credentials nefr597@gmail.com Rita12300$
+17:22:06.071 [Test worker] INFO  manager.TestNgListeners - Test loginPositiveUserDTO  successful
+17:22:06.071 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestSuccess getTestContext: org.testng.TestRunner@56da96b3
+17:22:06.316 [Test worker] INFO  tests.TestBase - flagNeedLogout = false
+17:22:06.316 [Test worker] INFO  tests.TestBase - method info: loginPositiveUserDTO
+17:22:06.317 [Test worker] INFO  tests.TestBase - ================================================================================================================
+17:22:06.317 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getName: loginPositiveUserLombok
+17:22:06.317 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getHost: null
+17:22:06.317 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getTestContext: org.testng.TestRunner@56da96b3
+17:22:11.336 [Test worker] INFO  tests.TestBase - flagNeedLogout = true
+17:22:11.336 [Test worker] INFO  tests.TestBase -  loginPositiveUser starts with credentials nefr42@gmail.com Rita12345$
+17:22:11.629 [Test worker] INFO  manager.TestNgListeners - Test loginPositiveUserLombok  successful
+17:22:11.629 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestSuccess getTestContext: org.testng.TestRunner@56da96b3
+17:22:11.859 [Test worker] INFO  tests.TestBase - flagNeedLogout = false
+17:22:11.859 [Test worker] INFO  tests.TestBase - method info: loginPositiveUserLombok
+17:22:11.859 [Test worker] INFO  tests.TestBase - ================================================================================================================
+17:22:11.859 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getName: loginPositiveUserProps
+17:22:11.859 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getHost: null
+17:22:11.859 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestStart getTestContext: org.testng.TestRunner@56da96b3
+17:22:15.168 [Test worker] INFO  manager.TestNgListeners - Test loginPositiveUserProps  successful
+17:22:15.168 [Test worker] INFO  manager.TestNgListeners - TestNG event onTestSuccess getTestContext: org.testng.TestRunner@56da96b3
+17:22:15.400 [Test worker] INFO  tests.TestBase - flagNeedLogout = false
+17:22:15.401 [Test worker] INFO  tests.TestBase - method info: loginPositiveUserProps
+17:22:15.402 [Test worker] INFO  tests.TestBase - ================================================================================================================
 </pre>
 </span>
 </div>
@@ -188,7 +377,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.4</a> at 16 Dec 2023, 17:46:50</p>
+<a href="http://www.gradle.org">Gradle 7.4</a> at 18 Dec 2023, 17:23:26</p>
 </div>
 </div>
 </body>

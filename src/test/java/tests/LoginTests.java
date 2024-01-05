@@ -31,9 +31,10 @@ public class LoginTests extends TestBase {
     }
     @Test(groups = {"positive"},dataProvider="userDto",dataProviderClass = ProviderData.class)
     public void loginPositiveUser(User user) {
-        app.getUser().login(user);
 
+        app.getUser().login(user);
         flagNeedLogout=true;
+
         logger.info("flagNeedLogout = " + flagNeedLogout);
         logger.info(" loginPositiveUser starts with credentials "
                 + user.getEmail() + " " + user. getPassword());
@@ -42,11 +43,18 @@ public class LoginTests extends TestBase {
 
 
 
+
+
     }
     @Test(groups = {"positive"},dataProvider="userDto",dataProviderClass = ProviderData.class)
     public void loginPositiveUser2(User user) {
         app.getUser().login(user);
         flagNeedLogout=true;
+
+        logger.info("flagNeedLogout = " + flagNeedLogout);
+        logger.info(" loginPositiveUser starts with credentials "
+                + user.getEmail() + " " + user. getPassword());
+
         app.getUser().isElementPresent(By.xpath("//h1[.='Logged in']")) ;
         app.getUser().buttonOk();
 
@@ -54,7 +62,7 @@ public class LoginTests extends TestBase {
     }
     @Test
     public void loginPositiveUserProps() {
-
+        app.getUser().pause(2000);
         app.getUser().login(app.getEmail(), app.getPassword());
         flagNeedLogout=true;
         app.getUser().isElementPresent(By.xpath("//h1[.='Logged in']")) ;
@@ -66,6 +74,10 @@ public class LoginTests extends TestBase {
     public void loginPositiveUserDTO(User user) {
         app.getUser().login(user);
         flagNeedLogout=true;
+
+        logger.info("flagNeedLogout = " + flagNeedLogout);
+        logger.info(" loginPositiveUser starts with credentials "
+                + user.getEmail() + " " + user. getPassword());
         app.getUser().isElementPresent(By.xpath("//h1[.='Logged in']")) ;
         app.getUser().buttonOk();
 
@@ -80,6 +92,9 @@ public class LoginTests extends TestBase {
                 .build();
          app.getUser().loginLombok(user);
          flagNeedLogout=true;
+        logger.info("flagNeedLogout = " + flagNeedLogout);
+        logger.info(" loginPositiveUser starts with credentials "
+                + user.getEmail() + " " + user. getPassword());
          app.getUser().isElementPresent(By.xpath("//h1[.='Logged in']")) ;
          app.getUser().buttonOk();
 

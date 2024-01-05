@@ -50,6 +50,7 @@ public class HelperUser extends HelperBase {
 
     }
     public void fillRegistrationFormWith(User user) {
+        pause(2000);
         type(By.xpath(" //input[@id='name']"), user.getName());
         type(By.xpath(" //input[@id='lastName']"), user.getLastName());
         type(By.xpath(" //input[@id='email']"), user.getEmail());
@@ -73,15 +74,18 @@ public class HelperUser extends HelperBase {
 
 
     public void login(User user) {
+        pause(2000);
         openLoginForm();
+        pause(2000);
         fillLoginForm(user);
         submitLogin();
 
 
     }
     public void loginLombok(UserLombok user) {
+        pause(2000);
         openLoginForm();
-        pause(15);
+        pause(2000);
         fillLoginForm(user.getEmail(), user.getPassword());
         submitLogin();
 
